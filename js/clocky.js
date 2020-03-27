@@ -57,6 +57,7 @@ function changeFont() {
             break;
         default:
             clock.style.fontFamily = "'Bungee Shad', cursive";
+            count = 0;
             break;
     }
 }
