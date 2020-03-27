@@ -52,11 +52,11 @@ function changeFont() {
             count += 1;
             break;
         case 6:
-            clock.style.fontFamily = "'Bungee Shad', cursive";
+            clock.style.fontFamily = "'Bungee Shade', cursive";
             count = 0;
             break;
         default:
-            clock.style.fontFamily = "'Bungee Shad', cursive";
+            clock.style.fontFamily = "'Bungee Shade', cursive";
             count = 0;
             break;
     }
