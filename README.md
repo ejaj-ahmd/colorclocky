@@ -1,2 +1,2 @@
 # colorclocky
- A clock that changes its backgroud every second.
+ A clock that changes its background every second.
