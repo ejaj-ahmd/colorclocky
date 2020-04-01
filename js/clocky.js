@@ -15,13 +15,18 @@ function clocky() {
     clock = document.getElementById("clock");
     clock.innerHTML = h + ":" + m + ":" + s;
 
-    document.body.style.backgroundColor = color;
-    document.getElementById("change").style.color = color;
+    // document.body.style.backgroundColor = color;
+    // document.getElementById("change").style.color = color;
+    // document.getElementById("color").style.color = color;
+    // document.getElementById("lblColor").style.color = color;
+    // secondly();
 
     setInterval(clocky, 1000);
 }
 
 clocky();
+secondly();
+setInterval(secondly, 1000)
 
 count = 0;
 
@@ -60,4 +65,31 @@ function changeFont() {
             count = 0;
             break;
     }
+}
+
+$("select#color").change(function(){
+    var colorOption = $(this).children("option:selected").val();
+    if (colorOption == "minutely") {
+        setInterval(secondly, 60000);
+        alert("minutely");
+    } else if (colorOption == "hourly") {
+        setInterval(secondly, 3600000);
+        alert("hourly");
+    } else if (colorOption == "daily") {
+        setInterval(secondly, 86400000);
+        alert("daily");
+    } else {
+        setInterval(secondly, 1000);
+        alert("secondly");
+    }    
+});
+
+function secondly() {
+    document.body.style.backgroundColor = color;
+    document.getElementById("change").style.color = color;
+    document.getElementById("color").style.color = color;
+    document.getElementById("lblColor").style.color = color;
+    document.getElementById("check").innerHTML = color;
+
+    // setInterval(secondly, 1000);
 }

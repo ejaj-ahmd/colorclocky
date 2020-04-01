@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Clocky | Color Changes Over Time | EJAJ</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="/css/clockyStyle.css">
 </head>
 <body>
+    <h1 id="check">check</h1>
     <div id="clock">
         12:12:12
     </div>
 
     <div id="font">
-        <button id="change" onclick="changeFont()">Change Clocky</button>
+        <button id="change" onclick="changeFont()">Change Clocky</button> 
+    </div>
+
+    <div id="colorChange">
+        <label id="lblColor" for="color">Change Color : </label>
+        <select name="color" id="color">
+            <option value="secondly" selected="selected">Every Second</option>
+            <option value="minutely">Every Minute</option>
+            <option value="hourly">Every Hour</option>
+            <option value="daily">Every Day</option>
+        </select>
     </div>
 
     <script src="/js/clocky.js"></script>
